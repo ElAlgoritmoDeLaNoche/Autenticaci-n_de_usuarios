@@ -2,6 +2,8 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
 
+import authRoutes from './routes/authRoutes.js'
+
 const app = express()
 dotenv.config()
 
@@ -19,6 +21,9 @@ app.use(cors(corsOptions))
 app.get('/', (req, res) => {
   res.send('<h3>Hello World!</h3>')
 })
+
+// routes
+app.use('/api', authRoutes)
 
 const PORT = process.env.PORT ?? 3002
 
