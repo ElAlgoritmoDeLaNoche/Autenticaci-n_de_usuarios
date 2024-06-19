@@ -166,7 +166,7 @@
           alert("Passwords do not match!");
         }
 
-        fetch("/register", {
+        fetch("/api/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -189,7 +189,7 @@
 
       logoutButton?.addEventListener("click", (e) => {
         e.preventDefault();
-        fetch("/logout", {
+        fetch("/api/logout", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
