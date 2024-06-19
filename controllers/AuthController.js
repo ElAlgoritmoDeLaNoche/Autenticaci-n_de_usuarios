@@ -27,3 +27,7 @@ export const Register = async (req, res) => {
 }
 
 export const Logout = async (req, res) => { }
+
+export const Protected = async (req, res) => {
+  res.status(200).json({ message: 'Protected route' })
+}

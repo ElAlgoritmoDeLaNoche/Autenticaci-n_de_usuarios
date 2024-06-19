@@ -5,6 +5,7 @@ import authRoutes from './routes/authRoutes.js'
 import { PORT } from './config.js'
 
 const app = express()
+app.set('view engine', 'ejs')
 
 // middlewares
 app.use(express.json())
@@ -18,7 +19,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 app.get('/', (req, res) => {
-  res.send('<h3>Hello World!</h3>')
+  res.render('index')
 })
 
 // routes
