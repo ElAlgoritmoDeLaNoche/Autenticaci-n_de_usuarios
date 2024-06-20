@@ -1,10 +1,12 @@
 import express from 'express'
 import cors from 'cors'
+import cookieParser from 'cookie-parser'
 
 import authRoutes from './routes/authRoutes.js'
 import { PORT } from './config.js'
 
 const app = express()
+app.use(cookieParser())
 app.set('view engine', 'ejs')
 
 // middlewares

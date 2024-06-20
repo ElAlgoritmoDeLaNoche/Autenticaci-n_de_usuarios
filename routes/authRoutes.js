@@ -8,6 +8,4 @@ router.post('/register', Register)
 router.post('/logout', Logout)
 router.get('/protected', Protected)
 
-router.get('/login')
-
 export default router
