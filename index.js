@@ -24,6 +24,7 @@ app.use(cors(corsOptions))
 app.get('/', (req, res) => {
   const token = req.cookies.access_token
 
+  if (!token) return res.render('index')
   try {
     const data = jwt.verify(token, JWT_SECRET)
     res.render('index', data)
